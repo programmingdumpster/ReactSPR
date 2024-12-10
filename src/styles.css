@@ -1,0 +1,37 @@
+:root {
+  --background-color: white;
+  --text-color: black;
+  --nav-background: #f8f9fa; /* Jasne tło nawigacji */
+  --nav-link-color: black; /* Kolor linków w trybie jasnym */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #121212; /* Ciemne tło */
+    --text-color: white; /* Jasny tekst */
+    --nav-background: #343a40; /* Ciemne tło nawigacji */
+    --nav-link-color: #ffffff; /* Jasny kolor linków w trybie ciemnym */
+  }
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.nav {
+  background-color: var(--nav-background);
+}
+
+.nav-link {
+  color: var(--nav-link-color);
+}
+
+.nav-link.active {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Efekt aktywnego linku w trybie ciemnym */
+}
